@@ -30,6 +30,7 @@
     
     <context:annotation-config/>
     <context:component-scan base-package="com.tu.controller" />
+    <context:component-scan base-package="com.tu.service" />
     
 	<mvc:annotation-driven/>
 	

@@ -22,11 +22,11 @@ public class LambdaTest {
 		System.out.println("===========");
 		
 		//lambda±í´ïÊ½
-		players.forEach((player) -> System.out.print(player + ";"));
+		//players.forEach((player) -> System.out.print(player + ";"));
 		
 		System.out.println();
 		System.out.println("===========");
-		players.forEach(System.out::println); 
+		//players.forEach(System.out::println); 
 	}
 
 }

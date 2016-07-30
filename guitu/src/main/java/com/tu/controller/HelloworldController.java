@@ -6,16 +6,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.tu.redis.RedisUtil;
-
 @Controller
 @RequestMapping("/test")
 public class HelloworldController{
 	
 	@RequestMapping("/hello")
 	public ModelAndView sayHello(ModelMap model) {
-		String username = RedisUtil.getJedisInstance().get("myname");
-		model.addAttribute("message", "Hello World, I'm "+username+".");
+		//String username = RedisUtil.getJedisInstance().get("myname");
+		model.addAttribute("message", "Hello World, I'm William.");
 		
         return new ModelAndView("hello");
 	}
@@ -23,10 +21,10 @@ public class HelloworldController{
 	
 	@RequestMapping("/change")
 	public ModelAndView changeName(ModelMap model,@RequestParam("name") String name) {
-		RedisUtil.getJedisInstance().set("myname", name);
+		//RedisUtil.getJedisInstance().set("myname", name);
 		
-		String username = RedisUtil.getJedisInstance().get("myname");
-		model.addAttribute("message", "Hello World, I'm "+username+".");
+		//String username = RedisUtil.getJedisInstance().get("myname");
+		model.addAttribute("message", "Hello World, I'm William.");
 		
         return new ModelAndView("hello");
 	}
